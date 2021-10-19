@@ -1,0 +1,56 @@
+{# HTML5 declaration #}
+<!DOCTYPE html>
+<html>
+    {# Make modifiable head elements #}
+    <head>
+        <title>{% block title %}Base Template{% endblock title %}</title>
+        {% block head_meta %}
+            {% block head_meta_charset %}
+                <meta http-equiv="Content-Type"
+                      content="text/html; charset=utf-8" />
+            {% endblock head_meta_charset %}
+            {% block head_meta_contentlanguage %}
+                <meta http-equiv="Content-Language" value="en-US" />
+            {% endblock head_meta_contentlanguage %}
+            {% block head_meta_viewport %}
+                <meta name="viewport"
+                      content="width=device-width, initial-scale=1.0">
+            {% endblock head_meta_viewport %}
+        {% endblock head_meta %}
+        {% block head_css %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">   
+        {% endblock head_css %}
+    </head>
+    <body>
+        {# Navigation Menu #}
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">{% block nav_title %}Base Template{% endblock nav_title %}</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">{% block nav_item1 %}Base{% endblock nav_item1 %}<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">{% block nav_item2 %}Base{% endblock nav_item2 %}</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">{% block nav_item3 %}Base{% endblock nav_item3 %}</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            <h1 style="margin-left: 15px;">{% block hero_header %}Welcome to the Base Template Website!{% endblock hero_header %}</h1>
+        </header>
+        <h2 style="margin-left: 15px;">{% block body_heading %}this is the header for the text of the Base Template Website{% endblock body_heading %}</h2>
+        <p style="margin-left: 15px;">{% block body_text %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a rhoncus dui. Pellentesque ornare commodo odio quis lobortis. Praesent molestie nec lorem eu egestas. Sed tincidunt elit sit amet sagittis vulputate. Nulla id turpis vitae nisl feugiat posuere. Suspendisse potenti. In hac habitasse platea dictumst. Sed sit amet volutpat augue, nec scelerisque libero.{% endblock body_text %}</p>
+        {% block footer_javascript %}
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        {% endblock footer_javascript %}
+    </body>
+</html>
