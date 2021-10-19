@@ -1,0 +1,10 @@
+Ralph Peter, 999999, December 24 1996
+Student(Ralph,Peter,999999,December 24 1996)
+[{'Mathe': 3.0}, {'Informatik': 1.0}, {'Elektrotechnik': 4.0}]
+Mathe 3.0
+Informatik 1.0
+Elektrotechnik 4.0
+Number of times cheated: 2
+Mathe 1.0
+Informatik 1.0
+Elektrotechnik 1.0
