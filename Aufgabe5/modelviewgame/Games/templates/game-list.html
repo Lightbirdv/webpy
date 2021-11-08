@@ -1,0 +1,24 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'Games/games_style.css' %}">
+{% endblock %}
+
+{% block title %}Games list{% endblock %}
+
+{% block content %}
+<div class="list-container">
+    <h2>Games list</h2>
+    <ul>
+        {% for game in all_the_games %}
+            <div class="list-item">
+                <a href="{{ game.id }}/" class="game-title"><b>{{ game.name }}</b></a><br>
+                {{ game.studio }} / {{ game.genre }} / {{ game.fsk }}<br>
+                <br>
+            </div>
+        {% endfor %}
+    </ul>
+    <a href={% url 'game-create' %}>Add a new game</a><br>
+</div>
+{% endblock %}

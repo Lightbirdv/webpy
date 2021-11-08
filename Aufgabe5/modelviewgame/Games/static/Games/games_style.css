@@ -1,0 +1,40 @@
+h2 {
+    color: #262424;
+    font-size: 30px;
+}
+
+p {
+    color: #262424;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+form {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.list-container {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.list-item {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.game-title {
+    font-size: 30px;
+}
